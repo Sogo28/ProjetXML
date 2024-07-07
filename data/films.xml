@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Films SYSTEM "../schemas/cinema.dtd">
+<Films>
+  <Film titre="Les Brigades du Tigre" deleted="false" id="1235">
+    <duree heures="2" minutes="5" />
+    <genre>Policier</genre>
+    <realisateur>Jérôme Cornuau</realisateur>
+    <acteurs>
+      <acteur>C. Cornillac</acteur>
+      <acteur>D. Kruger</acteur>
+      <acteur>E. Baer</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>Les aventures du commissaire Valentin et des inspecteurs Terrasson et Pujol,membres
+      des Brigades mobiles, corps spécial de la police française créé avant la Première Guerre
+      mondiale.</description>
+    <horaires>
+      <horaire jour="Mer" heures="14" minutes="00" />
+      <horaire jour="Mer" heures="16" minutes="40" />
+      <horaire jour="Mer" heures="19" minutes="40" />
+      <horaire jour="Mer" heures="22" minutes="10" />
+      <horaire jour="Sam" heures="14" minutes="00" />
+      <horaire jour="Sam" heures="16" minutes="40" />
+      <horaire jour="Sam" heures="19" minutes="40" />
+      <horaire jour="Sam" heures="22" minutes="10" />
+      <horaire jour="Jeu" heures="14" minutes="00" />
+      <horaire jour="Jeu" heures="19" minutes="40" />
+      <horaire jour="Jeu" heures="22" minutes="10" />
+      <horaire jour="Ven" heures="14" minutes="00" />
+      <horaire jour="Ven" heures="19" minutes="40" />
+      <horaire jour="Ven" heures="22" minutes="10" />
+      <horaire jour="Lun" heures="14" minutes="00" />
+      <horaire jour="Lun" heures="19" minutes="40" />
+      <horaire jour="Lun" heures="22" minutes="10" />
+      <horaire jour="Mar" heures="14" minutes="00" />
+      <horaire jour="Mar" heures="19" minutes="40" />
+      <horaire jour="Mar" heures="22" minutes="10" />
+      <horaire jour="Dim" heures="10" minutes="20" />
+      <horaire jour="Dim" heures="14" minutes="00" />
+      <horaire jour="Dim" heures="16" minutes="40" />
+      <horaire jour="Dim" heures="20" minutes="20" />
+    </horaires>
+    <notes>
+      <note auteur="Presse" valeur="3" base="5" />
+      <note auteur="Spectateurs" valeur="4" base="5" />
+    </notes>
+  </Film>
+  <Film titre="Le Seigneur des Anneaux" deleted="false" id="6686ca4794aab">
+    <duree heures="1" minutes="30" />
+    <genre>Fantastique</genre>
+    <realisateur>Peter Jackson</realisateur>
+    <acteurs>
+      <acteur>Elijah Wood</acteur>
+      <acteur>Ian McKellen</acteur>
+      <acteur>Viggo Mortensen</acteur>
+    </acteurs>
+    <annee>2001</annee>
+    <langue code="EN" />
+    <description>Un jeune hobbit, Frodon Sacquet, herite d'un anneau. Bien loin de chez lui, dans
+      les tenebres de la Terre du Milieu, il devra detruire l'anneau unique en se rendant au Mordor,
+      lieu de sa creation. Il pourra aneantir sa puissance pour eviter que Sauron, le seigneur des
+      tenebres, ne reduise en esclavage la Terre du Milieu.</description>
+    <horaires>
+      <horaire jour="Lun" heures="20" minutes="30" />
+      <horaire jour="Mar" heures="20" minutes="30" />
+      <horaire jour="Mer" heures="20" minutes="30" />
+      <horaire jour="Jeu" heures="20" minutes="30" />
+      <horaire jour="Ven" heures="20" minutes="30" />
+      <horaire jour="Sam" heures="20" minutes="30" />
+      <horaire jour="Dim" heures="20" minutes="30" />
+    </horaires>
+    <notes>
+      <note auteur="Jean" valeur="4" base="5" />
+      <note auteur="Paul" valeur="3" base="5" />
+      <note auteur="Jacques" valeur="5" base="5" />
+    </notes>
+  </Film>
+  <Film titre="test " deleted="true" id="668961f8dd572">
+    <duree heures="12" minutes="45" />
+    <genre>Policier</genre>
+    <realisateur>Daniel </realisateur>
+    <acteurs>
+      <acteur>daniel</acteur>
+      <acteur>andré</acteur>
+      <acteur>sogo</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>test</description>
+    <horaires>
+      <horaire jour="Lun" heures="12" minutes="30" />
+      <horaire jour="Mar" heures="13" minutes="45" />
+    </horaires>
+    <notes>
+      <note auteur="Specs" valeur="4" base="5" />
+    </notes>
+  </Film>
+  <Film titre="test 2 " deleted="true" id="668966758eeb3">
+    <duree heures="12" minutes="45" />
+    <genre>Policier</genre>
+    <realisateur>Daniel </realisateur>
+    <acteurs>
+      <acteur>daniel</acteur>
+      <acteur>andré</acteur>
+      <acteur>sogo</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>test 22</description>
+    <horaires>
+      <horaire jour="Lun" heures="12" minutes="30" />
+      <horaire jour="Mar" heures="13" minutes="45" />
+    </horaires>
+    <notes>
+      <note auteur="Specs" valeur="4" base="5" />
+    </notes>
+  </Film>
+  <Film titre="test 2 " deleted="true" id="6689672991ca1">
+    <duree heures="12" minutes="45" />
+    <genre>Policier</genre>
+    <realisateur>Daniel </realisateur>
+    <acteurs>
+      <acteur>daniel</acteur>
+      <acteur>andré</acteur>
+      <acteur>sogo</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>dede</description>
+    <horaires>
+      <horaire jour="Lun" heures="12" minutes="30" />
+      <horaire jour="Mar" heures="13" minutes="45" />
+    </horaires>
+    <notes>
+      <note auteur="Specs" valeur="4" base="5" />
+    </notes>
+  </Film>
+  <Film titre="test 3" deleted="true" id="66896743cd62f">
+    <duree heures="12" minutes="45" />
+    <genre>Policier</genre>
+    <realisateur>Daniel </realisateur>
+    <acteurs>
+      <acteur>daniel</acteur>
+      <acteur>andré</acteur>
+      <acteur>sogo</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>deded</description>
+    <horaires>
+      <horaire jour="Lun" heures="12" minutes="30" />
+      <horaire jour="Mar" heures="13" minutes="45" />
+    </horaires>
+    <notes>
+      <note auteur="Specs" valeur="4" base="5" />
+    </notes>
+  </Film>
+  <Film titre="test 3" deleted="true" id="668a88e3c0b27">
+    <duree heures="12" minutes="45" />
+    <genre>Policier</genre>
+    <realisateur>Daniel </realisateur>
+    <acteurs>
+      <acteur>daniel</acteur>
+      <acteur>andré</acteur>
+      <acteur>sogo</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>test</description>
+    <horaires>
+      <horaire jour="Lun" heures="12" minutes="30" />
+      <horaire jour="Mar" heures="13" minutes="45" />
+    </horaires>
+    <notes>
+      <note auteur="Specs" valeur="4" base="5" />
+    </notes>
+  </Film>
+  <Film titre="test 5" deleted="true" id="668a9729bc2bc">
+    <duree heures="12" minutes="45" />
+    <genre>Policier</genre>
+    <realisateur>Daniel </realisateur>
+    <acteurs>
+      <acteur>daniel</acteur>
+      <acteur>andré</acteur>
+      <acteur>sogo</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>desc</description>
+    <horaires>
+      <horaire jour="Lun" heures="12" minutes="30" />
+      <horaire jour="Mar" heures="13" minutes="45" />
+    </horaires>
+    <notes>
+      <note auteur="Specs" valeur="4" base="5" />
+    </notes>
+  </Film>
+  <Film titre="test genre policier" deleted="true" id="668a977741088">
+    <duree heures="12" minutes="45" />
+    <genre>Policier</genre>
+    <realisateur>Daniel </realisateur>
+    <acteurs>
+      <acteur>daniel</acteur>
+      <acteur>andré</acteur>
+      <acteur>sogo</acteur>
+    </acteurs>
+    <annee>2005</annee>
+    <langue code="VF" />
+    <description>deadezda</description>
+    <horaires>
+      <horaire jour="Lun" heures="12" minutes="30" />
+      <horaire jour="Mar" heures="13" minutes="45" />
+    </horaires>
+    <notes>
+      <note auteur="Specs" valeur="4" base="5" />
+    </notes>
+  </Film>
+</Films>
