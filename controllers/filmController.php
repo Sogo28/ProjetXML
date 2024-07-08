@@ -1,6 +1,7 @@
 <?php
 require_once 'model/DAO/FilmDAO.php';
 require_once 'model/domain/Film.php';
+require_once 'services/Format.php';
 class FilmController
 {
   public function showIndex()
@@ -29,7 +30,9 @@ class FilmController
   public function showFilm($id)
   {
     $filmDAO = new FilmDAO();
+    $serviceFormat = new Format();
     $film = $filmDAO->getByid($id);
+    $horairesFormatees = $serviceFormat->formatHoraires($film->horaires->horaire);
     $genres = $filmDAO->getAllGenres();
     require_once 'views/film.php';
   }
@@ -44,31 +47,47 @@ class FilmController
 
   public function addFilm()
   {
+    // Récupération des données du formulaire
+    $titre = $_POST['titre'];
+    $duree = $_POST['duree_heures']; // Format HH:MM
+    $genre = $_POST['genre'];
+    $realisateur = $_POST['realisateur'];
+    $acteurs = $_POST['acteurs']; // Tableau d'acteurs
+    $annee = $_POST['annee'];
+    $langue = strtoupper($_POST['langue']);
+    $description = $_POST['description'];
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $titre = $_POST['titre'];
-      $duree = [(int) $_POST['duree_heures'], (int) $_POST['duree_minutes']];
-      $genre = $_POST['genre'];
-      $realisateur = $_POST['realisateur'];
-      $acteurs = explode(',', $_POST['acteurs']);
-      $annee = (int) $_POST['annee'];
-      $langue = $_POST['langue'];
-      $description = $_POST['description'];
-      $horaires = array_map(function ($horaire) {
-        return explode(';', $horaire);
-      }, explode(',', $_POST['horaires']));
-      $notes = array_map(function ($note) {
-        return explode(';', $note);
-      }, explode(',', $_POST['notes']));
-      $film = new Film($titre, $duree, $genre, $realisateur, $acteurs, $annee, $langue, $description, $horaires, $notes);
+    // Extraction des heures et minutes
+    list($heures, $minutes) = explode(':', $duree);
 
-      $filmDAO = new FilmDAO();
-      if ($filmDAO->addFilm($film)) {
-        $this->showIndex(); // Redirect to index after adding the film
-      } else {
-        $this->showError("Erreur lors de l'ajout du film. Fichier non conforme à la DTD");
-      }
+    // Traitement des horaires
+    $horaires = [];
+    $horairesJours = $_POST['horairesJours'];
+    $horairesHeures = $_POST['horairesHeures'];
+    for ($i = 0; $i < count($horairesJours); $i++) {
+      list($heures, $minutes) = explode(':', $horairesHeures[$i]);
+      $horaires[] = [$horairesJours[$i], $heures, $minutes];
     }
+    // Traitement des notes
+    if (array_filter($_POST['notes'])) {
+      $notes = array_map(function ($note) {
+        return explode(',', trim($note));
+      }, $_POST['notes']);
+    } else {
+      $notes = [];
+    }
+
+    // Création de l'objet Film
+    $film = new Film($titre, [$heures, $minutes], $genre, $realisateur, $acteurs, $annee, $langue, $description, $horaires, $notes);
+
+    $filmDAO = new FilmDAO();
+    $isAdded = $filmDAO->addFilm($film);
+    if ($isAdded[0]) {
+      $this->showIndex(); // Redirect to index after adding the film
+    } else {
+      $this->showError("Erreur lors de l'ajout du film : " . $isAdded[1]);
+    }
+
 
   }
 

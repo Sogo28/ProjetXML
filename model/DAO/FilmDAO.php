@@ -5,7 +5,7 @@ class FilmDAO
   public $Films;
   function __construct()
   {
-    if ($this->isValid($this->dataPath)) {
+    if ($this->isValid($this->dataPath)[0]) {
       $this->Films = simplexml_load_file($this->dataPath);
     } else {
       exit("Le fichier xml n'est pas valide.");
@@ -18,11 +18,17 @@ class FilmDAO
     }
     $dom = new DOMDocument();
     $dom->Load($dataPath);
+    libxml_use_internal_errors(true);
     if (!$dom->validate()) {
-      return false;
+      // iterate over the errors and put it in a string
+      $errors = "";
+      foreach (libxml_get_errors() as $error) {
+        $errors .= $error->message . "<br>";
+      }
+      return [false, $errors];
     } else {
       // $this->Films = simplexml_import_dom($dom);
-      return true;
+      return [true, null];
     }
   }
   public function getAll()
@@ -76,20 +82,24 @@ class FilmDAO
       $newHoraire->addAttribute('heures', $horaire[1]);
       $newHoraire->addAttribute('minutes', $horaire[2]);
     }
-    $newFilmNotes = $newFilm->addChild('notes');
-    foreach ($Film->notes as $note) {
-      $newNote = $newFilmNotes->addChild('note');
-      $newNote->addAttribute('auteur', $note[0]);
-      $newNote->addAttribute('valeur', $note[1]);
-      $newNote->addAttribute('base', $note[2]);
+    if (!empty($Film->notes)) {
+      $newFilmNotes = $newFilm->addChild('notes');
+      foreach ($Film->notes as $note) {
+        $newNote = $newFilmNotes->addChild('note');
+        $newNote->addAttribute('auteur', $note[0]);
+        $newNote->addAttribute('valeur', $note[1]);
+        $newNote->addAttribute('base', $note[2]);
+      }
     }
     $this->Films->asXML("data\\temp.xml");
-    if ($this->isValid("data\\temp.xml")) {
+    $isValid = $this->isValid("data\\temp.xml");
+    if ($isValid[0]) {
       $this->Films->asXML($this->dataPath);
       unlink("data\\temp.xml");
-      return true;
+      return [true, $Film->id];
     } else {
-      return false;
+      unlink("data\\temp.xml");
+      return [false, $isValid[1]];
     }
   }
   public function deleteFilm($id)

@@ -24,10 +24,27 @@
         echo $acteur . ", ";
       } ?>
       <p>Année : <?= $film->annee ?></p>
-      <p class="italic ml-3"><?php foreach ($film->notes->note as $note) {
-        echo $note["auteur"] . " : " . $note["valeur"] . "/" . $note["base"] . " ";
-      } ?></p>
-      <p class="italic ml-3"><?= $film->description ?></p>
+
+      <?php
+      if (isset($film->notes)) {
+        ?>
+        <p class="italic ml-3">
+          <?php
+          foreach ($film->notes->note as $note) {
+            echo $note["auteur"] . " : " . $note["valeur"] . "/" . $note["base"] . " ";
+          }
+          ?>
+        </p>
+        <?php
+      }
+      ?>
+      <p class="italic ml-3 p-3 bg-slate-100"><?= $film->description ?></p>
+      <div>
+        <h3 class="font-bold">Horaires</h3>
+        <?php foreach ($horairesFormatees as $jour => $heure): ?>
+          <p><?= $jour ?> : <?= $heure ?></p>
+        <?php endforeach; ?>
+      </div>
     </div>
     <div class="flex gap-4 justify-end w-full">
       <a href="index.php?action=deleteFilm&id=<?= $id ?>" class="bg-red-500 text-white p-2 rounded">Supprimer</a>

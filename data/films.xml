@@ -76,144 +76,94 @@
       <note auteur="Jacques" valeur="5" base="5" />
     </notes>
   </Film>
-  <Film titre="test " deleted="true" id="668961f8dd572">
-    <duree heures="12" minutes="45" />
+  <Film titre="no notes" deleted="true" id="668bfd35c1e7d">
+    <duree heures="14" minutes="52" />
     <genre>Policier</genre>
-    <realisateur>Daniel </realisateur>
+    <realisateur>Daniel André</realisateur>
     <acteurs>
-      <acteur>daniel</acteur>
-      <acteur>andré</acteur>
-      <acteur>sogo</acteur>
+      <acteur>Dazz</acteur>
+      <acteur>Less Seck</acteur>
+      <acteur>Fatou Laobé</acteur>
     </acteurs>
-    <annee>2005</annee>
+    <annee>2018</annee>
     <langue code="VF" />
-    <description>test</description>
+    <description>description du film</description>
     <horaires>
-      <horaire jour="Lun" heures="12" minutes="30" />
-      <horaire jour="Mar" heures="13" minutes="45" />
+      <horaire jour="Lun" heures="13" minutes="45" />
     </horaires>
-    <notes>
-      <note auteur="Specs" valeur="4" base="5" />
-    </notes>
   </Film>
-  <Film titre="test 2 " deleted="true" id="668966758eeb3">
-    <duree heures="12" minutes="45" />
-    <genre>Policier</genre>
-    <realisateur>Daniel </realisateur>
+  <Film titre="No horaire?" deleted="false" id="668bfe8318088">
+    <duree heures="15" minutes="58" />
+    <genre>Romance</genre>
+    <realisateur>Daniel André</realisateur>
     <acteurs>
-      <acteur>daniel</acteur>
-      <acteur>andré</acteur>
-      <acteur>sogo</acteur>
+      <acteur>Dazz</acteur>
     </acteurs>
-    <annee>2005</annee>
+    <annee>2018</annee>
+    <langue code="EN" />
+    <description>dedededededededededed</description>
+    <horaires>
+      <horaire jour="Lun" heures="13" minutes="45" />
+    </horaires>
+  </Film>
+  <Film titre="Bad language" deleted="false" id="668bff62c0a1c">
+    <duree heures="03" minutes="56" />
+    <genre>Policier</genre>
+    <realisateur>Garou</realisateur>
+    <acteurs>
+      <acteur>André Ayou</acteur>
+    </acteurs>
+    <annee>2006</annee>
     <langue code="VF" />
-    <description>test 22</description>
+    <description>une description banale</description>
     <horaires>
-      <horaire jour="Lun" heures="12" minutes="30" />
-      <horaire jour="Mar" heures="13" minutes="45" />
+      <horaire jour="Lun" heures="13" minutes="45" />
     </horaires>
-    <notes>
-      <note auteur="Specs" valeur="4" base="5" />
-    </notes>
   </Film>
-  <Film titre="test 2 " deleted="true" id="6689672991ca1">
-    <duree heures="12" minutes="45" />
+  <Film titre="Bad language 4" deleted="false" id="668c025d1d4ab">
+    <duree heures="02" minutes="45" />
     <genre>Policier</genre>
-    <realisateur>Daniel </realisateur>
+    <realisateur>Garou</realisateur>
     <acteurs>
-      <acteur>daniel</acteur>
-      <acteur>andré</acteur>
-      <acteur>sogo</acteur>
+      <acteur>André Ayou</acteur>
     </acteurs>
-    <annee>2005</annee>
-    <langue code="VF" />
-    <description>dede</description>
+    <annee>2006</annee>
+    <langue code="EN" />
+    <description>desc</description>
     <horaires>
-      <horaire jour="Lun" heures="12" minutes="30" />
-      <horaire jour="Mar" heures="13" minutes="45" />
+      <horaire jour="Lun" heures="13" minutes="45" />
     </horaires>
-    <notes>
-      <note auteur="Specs" valeur="4" base="5" />
-    </notes>
   </Film>
-  <Film titre="test 3" deleted="true" id="66896743cd62f">
-    <duree heures="12" minutes="45" />
+  <Film titre="Trim test" deleted="false" id="668c05aec33fc">
+    <duree heures="15" minutes="28" />
     <genre>Policier</genre>
-    <realisateur>Daniel </realisateur>
+    <realisateur>deded</realisateur>
     <acteurs>
-      <acteur>daniel</acteur>
-      <acteur>andré</acteur>
-      <acteur>sogo</acteur>
+      <acteur>Daniel Daniel</acteur>
     </acteurs>
-    <annee>2005</annee>
-    <langue code="VF" />
-    <description>deded</description>
-    <horaires>
-      <horaire jour="Lun" heures="12" minutes="30" />
-      <horaire jour="Mar" heures="13" minutes="45" />
-    </horaires>
-    <notes>
-      <note auteur="Specs" valeur="4" base="5" />
-    </notes>
-  </Film>
-  <Film titre="test 3" deleted="true" id="668a88e3c0b27">
-    <duree heures="12" minutes="45" />
-    <genre>Policier</genre>
-    <realisateur>Daniel </realisateur>
-    <acteurs>
-      <acteur>daniel</acteur>
-      <acteur>andré</acteur>
-      <acteur>sogo</acteur>
-    </acteurs>
-    <annee>2005</annee>
-    <langue code="VF" />
-    <description>test</description>
-    <horaires>
-      <horaire jour="Lun" heures="12" minutes="30" />
-      <horaire jour="Mar" heures="13" minutes="45" />
-    </horaires>
-    <notes>
-      <note auteur="Specs" valeur="4" base="5" />
-    </notes>
-  </Film>
-  <Film titre="test 5" deleted="true" id="668a9729bc2bc">
-    <duree heures="12" minutes="45" />
-    <genre>Policier</genre>
-    <realisateur>Daniel </realisateur>
-    <acteurs>
-      <acteur>daniel</acteur>
-      <acteur>andré</acteur>
-      <acteur>sogo</acteur>
-    </acteurs>
-    <annee>2005</annee>
+    <annee>1945</annee>
     <langue code="VF" />
     <description>desc</description>
     <horaires>
-      <horaire jour="Lun" heures="12" minutes="30" />
-      <horaire jour="Mar" heures="13" minutes="45" />
+      <horaire jour="Lun" heures="13" minutes="45" />
     </horaires>
     <notes>
-      <note auteur="Specs" valeur="4" base="5" />
+      <note auteur="Presse" valeur="3" base="5" />
     </notes>
   </Film>
-  <Film titre="test genre policier" deleted="true" id="668a977741088">
-    <duree heures="12" minutes="45" />
+  <Film titre="test horaires " deleted="false" id="668c0bca20c8b">
+    <duree heures="08" minutes="54" />
     <genre>Policier</genre>
-    <realisateur>Daniel </realisateur>
+    <realisateur>dazzz</realisateur>
     <acteurs>
-      <acteur>daniel</acteur>
-      <acteur>andré</acteur>
-      <acteur>sogo</acteur>
+      <acteur>Dazz Less Seck</acteur>
     </acteurs>
-    <annee>2005</annee>
+    <annee>1545</annee>
     <langue code="VF" />
-    <description>deadezda</description>
+    <description>desc</description>
     <horaires>
-      <horaire jour="Lun" heures="12" minutes="30" />
-      <horaire jour="Mar" heures="13" minutes="45" />
+      <horaire jour="Lun" heures="12" minutes="45" />
+      <horaire jour="Mar" heures="08" minutes="54" />
     </horaires>
-    <notes>
-      <note auteur="Specs" valeur="4" base="5" />
-    </notes>
   </Film>
 </Films>
