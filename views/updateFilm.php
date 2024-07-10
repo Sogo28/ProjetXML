@@ -10,21 +10,23 @@
 <body class="bg-slate-100">
   <?php require_once 'components/header.php' ?>
   <div class="flex flex-col justify-center items-center bg-white w-2/3 h-full mt-8 shadow shadow-lg m-auto py-8 gap-3">
-    <h1 class="text-2xl">Ajouter un film</h1>
-    <form action="index.php?action=handleAddFilmSubmit" method="post" class=" flex flex-col gap-2 w-full px-8 ">
+    <h1 class="text-2xl">Modifier un film</h1>
+    <form action="index.php?action=handleUpdateFilmSubmit&id=<?= $film->id ?>" method="post"
+      class=" flex flex-col gap-2 w-full px-8 ">
 
       <div class="flex flex-row justify-between">
         <div class="flex flex-col">
           <label for="titre">Titre</label>
           <input type="text" name="titre" id="titre" required
             class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-            placeholder="Le seigneur des anneaux...">
+            placeholder="Le seigneur des anneaux..." value="<?= $film->titre ?>">
         </div>
 
         <div class="flex flex-col">
           <label for="duree_heures">Durée</label>
           <input type="time" name="duree_heures" id="duree_heures" required
-            class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+            class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+            value="<?= implode(":", [$film->duree[0], $film->duree[1]]) ?>">
         </div>
       </div>
 
@@ -32,31 +34,15 @@
       <div class="flex flex-row justify-between">
         <div class="flex flex-col">
           <label for="genre">Genre</label>
-          <select name="genre" id="genre" required
-            class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-            <option value="Policier">Policier</option>
-            <option value="Fantastique">Fantastique</option>
-            <option value="Romance">Romance</option>
-            <option value="Science-fiction">Science-fiction</option>
-            <option value="Comédie">Comédie</option>
-            <option value="Drame">Drame</option>
-            <option value="Horreur">Horreur</option>
-            <option value="Action">Action</option>
-            <option value="Animation">Animation</option>
-            <option value="Aventure">Aventure</option>
-            <option value="Biographie">Biographie</option>
-            <option value="Documentaire">Documentaire</option>
-            <option value="Famille">Famille</option>
-            <option value="Guerre">Guerre</option>
-            <option value="Histoire">Histoire</option>
-            <option value="Musical">Musical</option>
-          </select>
+          <input type="text" name="genre"
+            class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+            value="<?= $film->genre ?>">
         </div>
         <div class="flex flex-col">
           <label for="realisateur">Réalisateur</label>
           <input type="text" name="realisateur" id="realisateur" required
             class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-            placeholder="Albert Camus...">
+            value="<?= $film->realisateur ?>">
         </div>
       </div>
       <div class="flex flex-row justify-between">
@@ -64,37 +50,26 @@
           <label for="langue">Langue</label>
           <select name="langue" id="genre" required
             class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-            <option value="vf">Français</option>
-            <option value="en">Anglais</option>
-            <option value="es">Espagnol</option>
-            <option value="de">Allemand</option>
-            <option value="it">Italien</option>
-            <option value="ja">Japonais</option>
-            <option value="zh">Chinois</option>
-            <option value="ar">Arabe</option>
-            <option value="ru">Russe</option>
-            <option value="pt">Portugais</option>
-            <option value="nl">Néerlandais</option>
-            <option value="pl">Polonais</option>
-            <option value="tr">Turc</option>
-            <option value="vi">Vietnamien</option>
-            <option value="ko">Coréen</option>
-            <option value="id">Indonésien</option>
-            <option value="th">Thaïlandais</option>
-            <option value="he">Hébreu</option>
+            <?php if ($film->langue == "vf"): ?>
+              <option value="vf" selected>Français</option>
+              <option value="en">Anglais</option>
+            <?php else: ?>
+              <option value="vf">Français</option>
+              <option value="en" selected>Anglais</option>
+            <?php endif; ?>
           </select>
         </div>
         <div class="flex flex-col">
           <label for="annee">Année</label>
           <input type="number" name="annee" id="annee" required
             class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-            placeholder="2003...">
+            placeholder="2003..." value="<?= $film->annee ?>">
         </div>
       </div>
       <div class="flex flex-col">
         <label for="description">Description</label>
         <textarea name="description" id="description" required
-          class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2"></textarea>
+          class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2"><?= $film->description ?></textarea>
       </div>
 
       <div class="flex flex-col mt-4 gap-1 bg-slate-100 p-2 rounded shadow">
@@ -103,11 +78,17 @@
           <tr>
             <td class="text-left">Nom de l'acteur</td>
           </tr>
-          <tr>
-            <td><input type="text" name="acteurs[]"
+          <?php foreach ($film->acteurs as $acteur): ?>
+            <tr>
+              <td><input type="text" name="acteurs[]"
+                  class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-80 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2"
+                  value="<?= $acteur ?>">
+              </td>
+            </tr>
+          <?php endforeach; ?>
+          <!-- <td><input type="text" name="acteurs[]"
                 class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-80 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2">
-            </td>
-          </tr>
+            </td> -->
         </table>
         <div class="flex gap-4 justify-end w-full">
           <input type="button" value="Ajouter" onclick="addRowsActeurs()"
@@ -124,8 +105,8 @@
             <td class="text-left">Jour</td>
             <td class="text-left">Heure</td>
           </tr>
-          <tr>
-            <td id="col0">
+
+          <!-- <td id="col0">
               <select name="horairesJours[]" id="horairesJours"
                 class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-80 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 required>
@@ -141,8 +122,28 @@
             <td id="col1"><input type="time" name="horairesHeures[]"
                 class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-40 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2"
                 required>
-            </td>
-          </tr>
+            </td> -->
+          <?php foreach ($film->horaires as $horaire): ?>
+            <tr>
+              <td id="col0">
+                <select name="horairesJours[]" id="horairesJours"
+                  class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-80 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                  required>
+                  <option value="Lun" <?= $horaire[0] == "Lun" ? "selected" : "" ?>>Lundi</option>
+                  <option value="Mar" <?= $horaire[0] == "Mar" ? "selected" : "" ?>>Mardi</option>
+                  <option value="Mer" <?= $horaire[0] == "Mer" ? "selected" : "" ?>>Mercredi</option>
+                  <option value="Jeu" <?= $horaire[0] == "Jeu" ? "selected" : "" ?>>Jeudi</option>
+                  <option value="Ven" <?= $horaire[0] == "Ven" ? "selected" : "" ?>>Vendredi</option>
+                  <option value="Sam" <?= $horaire[0] == "Sam" ? "selected" : "" ?>>Samedi</option>
+                  <option value="Dim" <?= $horaire[0] == "Dim" ? "selected" : "" ?>>Dimanche</option>
+                </select>
+              </td>
+              <td id="col1"><input type="time" name="horairesHeures[]"
+                  class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-40 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2"
+                  required value="<?= implode(":", [$horaire[1], $horaire[2]]) ?>">
+              </td>
+            </tr>
+          <?php endforeach; ?>
         </table>
         <div class="flex gap-4 justify-end w-full">
           <input type="button" value="Ajouter" onclick="addRowsHoraires()"
@@ -158,11 +159,20 @@
           <tr>
             <td class="text-left">Note (Auteur,valeur,base)</td>
           </tr>
-          <tr>
-            <td id="col0"><input type="text" name="notes[]"
-                class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-80 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2">
+          <?php if (isset($film->notes)): ?>
+            <?php foreach ($film->notes as $note): ?>
+              <tr>
+                <td><input type="text" name="notes[]"
+                    class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-80 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2"
+                    value="<?= implode(",", $note) ?>">
+                </td>
+              <?php endforeach; ?>
+            <?php else: ?>
+              <td id="col0"><input type="text" name="notes[]"
+                  class="border-b-2 p-2 rounded rounded-lg  border-slate-300 text-sm w-80 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent mb-2">
+            </tr>
             </td>
-          </tr>
+          <?php endif; ?>
         </table>
         <div class="flex gap-4 justify-end w-full">
           <input type="button" value="Ajouter" onclick="addRowsNotes()"
@@ -173,7 +183,7 @@
       </div>
 
 
-      <input type="submit" value="Ajouter le film"
+      <input type="submit" value="Modifier le film"
         class="cursor-pointer mt-4 border border-1 bg-indigo-500 text-white p-1 rounded hover:bg-indigo-700">
     </form>
   </div>

@@ -12,15 +12,15 @@
   <?php require_once 'components/header.php' ?>
   <div class="flex flex-col gap-4 m-4 bg-white rounded rounded-xl p-4 shadow shadow-lg">
     <div class="flex flex-col gap-4 ">
-      <h1 class="text-2xl font-bold m-auto"><?= $film['titre'] ?></h1>
+      <h1 class="text-2xl font-bold m-auto"><?= $film->titre ?></h1>
       <p class="">
-        <?php echo $film->genre . " (" . $film->duree["heures"] . "h" . $film->duree["minutes"] . "min)" ?>
+        <?php echo $film->genre . " (" . $film->duree[0] . "h" . $film->duree[1] . "min)" ?>
       </p>
       <p>De <?= $film->realisateur ?></p>
-      <p>Langue : <?= $film->langue["code"] ?></p>
+      <p>Langue : <?= $film->langue ?></p>
       <?php
       echo "Avec : ";
-      foreach ($film->acteurs->acteur as $acteur) {
+      foreach ($film->acteurs as $acteur) {
         echo $acteur . ", ";
       } ?>
       <p>Année : <?= $film->annee ?></p>
@@ -30,8 +30,8 @@
         ?>
         <p class="italic ml-3">
           <?php
-          foreach ($film->notes->note as $note) {
-            echo $note["auteur"] . " : " . $note["valeur"] . "/" . $note["base"] . " ";
+          foreach ($film->notes as $note) {
+            echo $note[0] . " : " . $note[1] . "/" . $note[2] . " ";
           }
           ?>
         </p>

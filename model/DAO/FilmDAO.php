@@ -33,20 +33,30 @@ class FilmDAO
   }
   public function getAll()
   {
-    return $this->Films->xpath("//Film[@deleted='false']");
+    $allFilms = [];
+    foreach ($this->Films->Film as $film) {
+      if ($film['deleted'] == 'false') {
+        $allFilms[] = $this->mapToFilm($film);
+      }
+    }
+    return $allFilms;
   }
   public function getByid($id)
   {
-    return $this->Films->xpath("//Film[@id='$id']")[0];
+    return $this->mapToFilm($this->Films->xpath("//Film[@id='$id']")[0]);
   }
-  public function getByGenre($genre)
+  public function getAllByGenre($genre)
   {
-    return $this->Films->xpath("//Film[genre='$genre' and @deleted='false']");
+    $allFilmsByGenre = [];
+    foreach ($this->Films->Film as $film) {
+      if ($film->genre == $genre && $film['deleted'] == 'false') {
+        $allFilmsByGenre[] = $this->mapToFilm($film);
+      }
+    }
+    return $allFilmsByGenre;
   }
   public function getAllGenres()
   {
-    // return $this->Films->xpath("//Film/genre");
-    // get all genres from the xml file without duplicates
     $genres = [];
     foreach ($this->Films->Film as $film) {
       $genre = (string) $film->genre;
@@ -104,16 +114,15 @@ class FilmDAO
   }
   public function deleteFilm($id)
   {
-    $removedfilm = $this->getByid($id);
+    $removedfilm = $this->Films->xpath("//Film[@id='$id']")[0];
     $removedfilm['deleted'] = "true";
-    $this->Films->asXML($this->dataPath);
-    echo ("Film Supprimé avec succès.");
+    return $removedfilm['id'];
   }
-  public function updateFilm($id, $Film)
+  public function updateFilm($Film)
   {
+    $id = $Film->id;
     $filmToUpdate = $this->Films->xpath("//Film[@id='$id']")[0];
     $filmToUpdate['titre'] = $Film->titre;
-    $filmToUpdate['deleted'] = $Film->deleted;
     $filmToUpdate->duree->attributes()->heures = $Film->duree[0];
     $filmToUpdate->duree->attributes()->minutes = $Film->duree[1];
     $filmToUpdate->genre = $Film->genre;
@@ -132,24 +141,53 @@ class FilmDAO
       $newHoraire->addAttribute('heures', $horaire[1]);
       $newHoraire->addAttribute('minutes', $horaire[2]);
     }
-    $filmToUpdate->notes = '';
-    foreach ($Film->notes as $note) {
-      $newNote = $filmToUpdate->notes->addChild('note');
-      $newNote->addAttribute('auteur', $note[0]);
-      $newNote->addAttribute('valeur', $note[1]);
-      $newNote->addAttribute('base', $note[2]);
-    }
-    libxml_use_internal_errors(true);
-    if ($this->Films === false) {
-      foreach (libxml_get_errors() as $error) {
-        echo $error->message;
+    if (isset($Film->notes)) {
+      $filmToUpdate->notes = '';
+      foreach ($Film->notes as $note) {
+        $newNote = $filmToUpdate->notes->addChild('note');
+        $newNote->addAttribute('auteur', $note[0]);
+        $newNote->addAttribute('valeur', $note[1]);
+        $newNote->addAttribute('base', $note[2]);
       }
-    } else {
+    }
+    $this->Films->asXML("data\\temp.xml");
+    $isValid = $this->isValid("data\\temp.xml");
+    if ($isValid[0]) {
       $this->Films->asXML($this->dataPath);
-      echo ("Film modifié avec succès.");
+      unlink("data\\temp.xml");
+      return [true, $Film->id];
+    } else {
+      unlink("data\\temp.xml");
+      return [false, $isValid[1]];
     }
   }
-
-
+  private function mapToFilm($filmData)
+  {
+    $film = new Film();
+    $film->id = (string) $filmData['id'];
+    $film->titre = (string) $filmData['titre'];
+    $film->deleted = (string) $filmData['deleted'];
+    $film->duree = [(string) $filmData->duree['heures'], (string) $filmData->duree['minutes']];
+    $film->genre = (string) $filmData->genre;
+    $film->realisateur = (string) $filmData->realisateur;
+    $film->acteurs = [];
+    foreach ($filmData->acteurs->acteur as $acteur) {
+      $film->acteurs[] = (string) $acteur;
+    }
+    $film->annee = (int) $filmData->annee;
+    $film->langue = (string) $filmData->langue['code'];
+    $film->description = (string) $filmData->description;
+    $film->horaires = [];
+    foreach ($filmData->horaires->horaire as $horaire) {
+      $film->horaires[] = [(string) $horaire['jour'], (string) $horaire['heures'], (string) $horaire['minutes']];
+    }
+    if (isset($filmData->notes)) {
+      $film->notes = [];
+      foreach ($filmData->notes->note as $note) {
+        $film->notes[] = [(string) $note['auteur'], (int) $note['valeur'], (int) $note['base']];
+      }
+    }
+    return $film;
+  }
 }
 ?>

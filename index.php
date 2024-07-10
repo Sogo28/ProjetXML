@@ -15,13 +15,30 @@ if (!isset($_GET['action'])) {
       break;
     case 'genre':
       if (isset($_GET['value'])) {
-        $controller->showGenre($_GET['value']);
+        $controller->showAllByGenre($_GET['value']);
       } else {
         $controller->showError("Le genre n'existe pas");
       }
       break;
     case 'addFilm':
       $controller->showAddFilm();
+      break;
+    case 'handleAddFilmSubmit':
+      $controller->addFilm();
+      break;
+    case 'updateFilm':
+      if (isset($_GET['id'])) {
+        $controller->showUpdateFilm();
+      } else {
+        $controller->showError("Le film n'existe pas");
+      }
+      break;
+    case 'handleUpdateFilmSubmit':
+      if (isset($_GET['id'])) {
+        $controller->updateFilm();
+      } else {
+        $controller->showError("Le film n'existe pas");
+      }
       break;
     case 'deleteFilm':
       if (isset($_GET['id'])) {
@@ -30,9 +47,7 @@ if (!isset($_GET['action'])) {
         $controller->showError("Le film n'existe pas");
       }
       break;
-    case 'handleAddFilmSubmit':
-      $controller->addFilm();
-      break;
+
     default:
       break;
   }

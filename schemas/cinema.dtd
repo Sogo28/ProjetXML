@@ -10,7 +10,7 @@
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT horaires (horaire+)>
 <!ELEMENT horaire EMPTY>
-<!ELEMENT notes (note+)>
+<!ELEMENT notes (note*)>
 <!ELEMENT note EMPTY>
 
 
