@@ -14,19 +14,39 @@ class Film
   public $horaires;
   public $notes;
 
-  function __construct($titre, $duree, $genre, $realisateur, $acteurs, $annee, $langue, $description, $horaires, $notes)
+  function __construct()
   {
     $this->id = uniqid();
-    $this->titre = $titre;
-    $this->duree = $duree;
-    $this->genre = $genre;
-    $this->realisateur = $realisateur;
-    $this->acteurs = $acteurs;
-    $this->annee = $annee;
-    $this->langue = $langue;
-    $this->description = $description;
+  }
+
+  public function setHoraires($horairesJours, $horairesHeures)
+  {
+    $horaires = [];
+    $horairesJours = $_POST['horairesJours'];
+    $horairesHeures = $_POST['horairesHeures'];
+    for ($i = 0; $i < count($horairesJours); $i++) {
+      list($heures, $minutes) = explode(':', $horairesHeures[$i]);
+      $horaires[] = [$horairesJours[$i], $heures, $minutes];
+    }
     $this->horaires = $horaires;
+  }
+
+  public function setNotes($notes)
+  {
+    if (array_filter($notes)) {
+      $notes = array_map(function ($note) {
+        return explode(',', trim($note));
+      }, $_POST['notes']);
+    } else {
+      $notes = [];
+    }
     $this->notes = $notes;
+  }
+
+  public function setDuree($duree)
+  {
+    list($heures, $minutes) = explode(':', $duree);
+    $this->duree = [$heures, $minutes];
   }
 }
 ?>

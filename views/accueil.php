@@ -12,7 +12,7 @@
   <div class="flex flex-col gap-4 m-4">
     <?php foreach ($films as $film): ?>
       <div class="flex flex-col gap-4 border border-1">
-        <a href="index.php?action=film&id=<?= $film['id'] ?>" class="text-2xl font-bold"><?= $film['titre'] ?></a>
+        <a href="index.php?action=film&id=<?= $film->id ?>" class="text-2xl font-bold"><?= $film->titre ?></a>
         <p><?= $film->description ?></p>
       </div>
     <?php endforeach ?>
