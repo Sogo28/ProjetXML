@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE restaurants SYSTEM "../schemas/restaurants.dtd">
+<restaurants>
+    <restaurant id="R001">
+        <coordonnees nom="La Bonne Table" adresse="123 Rue Principale, Ville X" />
+        <nom_restaurateur>Jean Dupont</nom_restaurateur>
+        <description>
+            <paragraphe>Un restaurant familial avec une ambiance chaleureuse.</paragraphe>
+            <paragraphe>
+                <partie_texte_important>Notre spécialité:</partie_texte_important> les plats
+                traditionnels. </paragraphe>
+        </description>
+        <carte>
+            <plat id="P001" type_plat="entree">
+                <prix montant="10.00" devise="EUR" />
+                <desc_plat>
+                    <paragraphe>Salade César</paragraphe>
+                </desc_plat>
+            </plat>
+            <plat id="P002" type_plat="plat">
+                <prix montant="20.00" devise="EUR" />
+                <desc_plat>
+                    <paragraphe>Entrecôte grillée</paragraphe>
+                </desc_plat>
+            </plat>
+            <plat id="P003" type_plat="dessert">
+                <prix montant="8.00" devise="EUR" />
+                <desc_plat>
+                    <paragraphe>Tarte aux pommes</paragraphe>
+                </desc_plat>
+            </plat>
+        </carte>
+        <liste_menu choix_ordre="prix">
+            <menu>
+                <titre>Menu Déjeuner</titre>
+                <description_menu>Un menu complet à prix réduit</description_menu>
+                <prix montant="35.00" devise="EUR" />
+                <liste_elem_menu>
+                    <elem_menu plat_ref="P001" />
+                    <elem_menu plat_ref="P002" />
+                    <elem_menu plat_ref="P003" />
+                </liste_elem_menu>
+            </menu>
+        </liste_menu>
+    </restaurant>
+    <restaurant id="R002">
+        <coordonnees nom="Le Gourmet" adresse="456 Avenue de la Gastronomie, Ville Y" />
+        <nom_restaurateur>Marie Lemoine</nom_restaurateur>
+        <description>
+            <paragraphe> Un restaurant gastronomique avec une cuisine raffinée. <image
+                    position="droite" url="http" />
+            </paragraphe>
+            <paragraphe>
+                <partie_texte_important>Notre chef étoilé:</partie_texte_important> Marie Lemoine. </paragraphe>
+        </description>
+        <carte>
+            <plat id="P004" type_plat="entree">
+                <prix montant="15.00" devise="EUR" />
+                <desc_plat>
+                    <paragraphe>Foie gras maison</paragraphe>
+                </desc_plat>
+            </plat>
+            <plat id="P005" type_plat="plat">
+                <prix montant="30.00" devise="EUR" />
+                <desc_plat>
+                    <paragraphe>Filet de bœuf Rossini</paragraphe>
+                </desc_plat>
+            </plat>
+            <plat id="P006" type_plat="dessert">
+                <prix montant="12.00" devise="EUR" />
+                <desc_plat>
+                    <paragraphe>Soufflé au chocolat</paragraphe>
+                </desc_plat>
+            </plat>
+        </carte>
+        <liste_menu choix_ordre="apparition">
+            <menu>
+                <titre>Menu Dégustation</titre>
+                <description_menu>Un menu gastronomique en plusieurs services</description_menu>
+                <prix montant="60.00" devise="EUR" />
+                <liste_elem_menu>
+                    <elem_menu plat_ref="P004" />
+                    <elem_menu plat_ref="P005" />
+                    <elem_menu plat_ref="P006" />
+                </liste_elem_menu>
+            </menu>
+        </liste_menu>
+    </restaurant>
+</restaurants>

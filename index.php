@@ -49,6 +49,7 @@ if (!isset($_GET['action'])) {
       break;
 
     default:
+      $controller->showError("Cette Page n'existe pas");
       break;
   }
 }
