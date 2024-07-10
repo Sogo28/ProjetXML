@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE Films SYSTEM "../schemas/cinema.dtd">
 <Films>
-  <Film titre="Les Brigades du Tigre" deleted="false" id="1235">
-    <duree heures="02" minutes="45"/>
-    <genre>Policier</genre>
-    <realisateur>Jérôme Cornuau</realisateur>
-    <acteurs><acteur>C. Cornillac</acteur><acteur>D. Kruger</acteur><acteur>E. Baer</acteur></acteurs>
-    <annee>2005</annee>
-    <langue code="EN"/>
-    <description>Les aventures du commissaire Valentin et des inspecteurs Terrasson et&#13;
-      Pujol,membres&#13;
- des Brigades mobiles, corps spécial de la police française créé avant la&#13;
-      Première Guerre&#13;
- mondiale.</description>
-    <horaires><horaire jour="Mer" heures="14" minutes="00"/><horaire jour="Mer" heures="16" minutes="40"/><horaire jour="Mer" heures="19" minutes="40"/><horaire jour="Mer" heures="22" minutes="10"/><horaire jour="Sam" heures="14" minutes="00"/><horaire jour="Sam" heures="16" minutes="40"/><horaire jour="Sam" heures="19" minutes="40"/><horaire jour="Sam" heures="22" minutes="10"/><horaire jour="Jeu" heures="14" minutes="00"/><horaire jour="Jeu" heures="19" minutes="40"/><horaire jour="Jeu" heures="22" minutes="10"/><horaire jour="Ven" heures="14" minutes="00"/><horaire jour="Ven" heures="19" minutes="40"/><horaire jour="Ven" heures="22" minutes="10"/><horaire jour="Lun" heures="14" minutes="00"/><horaire jour="Lun" heures="19" minutes="40"/><horaire jour="Lun" heures="22" minutes="10"/><horaire jour="Mar" heures="14" minutes="00"/><horaire jour="Mar" heures="19" minutes="40"/><horaire jour="Mar" heures="22" minutes="10"/><horaire jour="Dim" heures="10" minutes="20"/><horaire jour="Dim" heures="14" minutes="00"/><horaire jour="Dim" heures="16" minutes="40"/><horaire jour="Dim" heures="20" minutes="20"/></horaires>
-    <notes><note auteur="Presse" valeur="3" base="5"/><note auteur="Spectateurs" valeur="4" base="5"/><note auteur="Test" valeur="5" base="5"/></notes>
-  </Film>
-  <Film titre="Le Seigneur des Anneaux" deleted="false" id="6686ca4794aab">
-    <duree heures="01" minutes="30"/>
-    <genre>Fantastique</genre>
-    <realisateur>Peter Jackson</realisateur>
-    <acteurs>
-      <acteur>Elijah Wood</acteur>
-      <acteur>Ian McKellen</acteur>
-      <acteur>Viggo Mortensen</acteur>
-    </acteurs>
-    <annee>2001</annee>
-    <langue code="EN"/>
-    <description>Un jeune hobbit, Frodon Sacquet, herite d'un anneau. Bien loin de chez lui, dans
-      les tenebres de la Terre du Milieu, il devra detruire l'anneau unique en se rendant au Mordor,
-      lieu de sa creation. Il pourra aneantir sa puissance pour eviter que Sauron, le seigneur des
-      tenebres, ne reduise en esclavage la Terre du Milieu.</description>
-    <horaires>
-      <horaire jour="Lun" heures="20" minutes="30"/>
-      <horaire jour="Mar" heures="20" minutes="30"/>
-      <horaire jour="Mer" heures="20" minutes="30"/>
-      <horaire jour="Jeu" heures="20" minutes="30"/>
-      <horaire jour="Ven" heures="20" minutes="30"/>
-      <horaire jour="Sam" heures="20" minutes="30"/>
-      <horaire jour="Dim" heures="20" minutes="30"/>
-    </horaires>
-    <notes>
-      <note auteur="Jean" valeur="4" base="5"/>
-      <note auteur="Paul" valeur="3" base="5"/>
-      <note auteur="Jacques" valeur="5" base="5"/>
-    </notes>
-  </Film>
-  <Film titre="no notes" deleted="true" id="668bfd35c1e7d">
-    <duree heures="14" minutes="52"/>
-    <genre>Policier</genre>
-    <realisateur>Daniel André</realisateur>
-    <acteurs>
-      <acteur>Dazz</acteur>
-      <acteur>Less Seck</acteur>
-      <acteur>Fatou Laobé</acteur>
-    </acteurs>
-    <annee>2018</annee>
-    <langue code="VF"/>
-    <description>description du film</description>
-    <horaires>
-      <horaire jour="Lun" heures="13" minutes="45"/>
-    </horaires>
-  </Film>
-  <Film titre="No horaire?" deleted="false" id="668bfe8318088">
-    <duree heures="15" minutes="58"/>
-    <genre>Romance</genre>
-    <realisateur>Daniel André</realisateur>
-    <acteurs>
-      <acteur>Dazz</acteur>
-    </acteurs>
-    <annee>2018</annee>
-    <langue code="EN"/>
-    <description>dedededededededededed</description>
-    <horaires>
-      <horaire jour="Lun" heures="13" minutes="45"/>
-    </horaires>
-  </Film>
-  <Film titre="Bad language" deleted="false" id="668bff62c0a1c">
-    <duree heures="03" minutes="56"/>
-    <genre>Policier</genre>
-    <realisateur>Garou</realisateur>
-    <acteurs>
-      <acteur>André Ayou</acteur>
-    </acteurs>
-    <annee>2006</annee>
-    <langue code="VF"/>
-    <description>une description banale</description>
-    <horaires>
-      <horaire jour="Lun" heures="13" minutes="45"/>
-    </horaires>
-  </Film>
-  <Film titre="Bad language 4" deleted="false" id="668c025d1d4ab">
-    <duree heures="02" minutes="45"/>
-    <genre>Policier</genre>
-    <realisateur>Garou</realisateur>
-    <acteurs>
-      <acteur>André Ayou</acteur>
-    </acteurs>
-    <annee>2006</annee>
-    <langue code="EN"/>
-    <description>desc</description>
-    <horaires>
-      <horaire jour="Lun" heures="13" minutes="45"/>
-    </horaires>
-  </Film>
-  <Film titre="Trim test" deleted="false" id="668c05aec33fc">
-    <duree heures="15" minutes="28"/>
-    <genre>Policier</genre>
-    <realisateur>deded</realisateur>
-    <acteurs>
-      <acteur>Daniel Daniel</acteur>
-    </acteurs>
-    <annee>1945</annee>
-    <langue code="VF"/>
-    <description>desc</description>
-    <horaires>
-      <horaire jour="Lun" heures="13" minutes="45"/>
-    </horaires>
-    <notes>
-      <note auteur="Presse" valeur="3" base="5"/>
-    </notes>
-  </Film>
-  <Film titre="test horaires " deleted="false" id="668c0bca20c8b">
-    <duree heures="08" minutes="54"/>
-    <genre>Policier</genre>
-    <realisateur>dazzz</realisateur>
-    <acteurs>
-      <acteur>Dazz Less Seck</acteur>
-    </acteurs>
-    <annee>1545</annee>
-    <langue code="EN"/>
-    <description>desc</description>
-    <horaires>
-      <horaire jour="Lun" heures="12" minutes="45"/>
-    </horaires>
-    <notes/>
-  </Film>
-  <Film titre="last add test" deleted="false" id="668d5bac0910b">
-    <duree heures="04" minutes="45"/>
-    <genre>Famille</genre>
-    <realisateur>Daniel </realisateur>
-    <acteurs>
-      <acteur>moi meme </acteur>
-    </acteurs>
-    <annee>2023</annee>
-    <langue code="VF"/>
-    <description>je test juste pour voir si avec la nouvelle couche l'ajout d'un film marche bien.</description>
-    <horaires>
-      <horaire jour="Mar" heures="12" minutes="45"/>
-    </horaires>
-  </Film>
+	<Film titre="Les Brigades du Tigre" deleted="false" id="1235">
+		<duree heures="02" minutes="45" />
+		<genre>Policier</genre>
+		<realisateur>Jérôme Cornuau</realisateur>
+		<acteurs>
+			<acteur>C. Cornillac</acteur>
+			<acteur>D. Kruger</acteur>
+			<acteur>E. Baer</acteur>
+		</acteurs>
+		<annee>2005</annee>
+		<langue code="EN" />
+		<description>Les aventures du commissaire Valentin et des inspecteurs Terrasson et Pujol,
+			membres des Brigades mobiles, corps spécial de la police française créé avant la
+			Première Guerre mondiale.</description>
+		<horaires>
+			<horaire jour="Mer" heures="14" minutes="00" />
+			<horaire jour="Mer" heures="16" minutes="40" />
+			<horaire jour="Mer" heures="19" minutes="40" />
+			<horaire jour="Mer" heures="22" minutes="10" />
+			<horaire jour="Sam" heures="14" minutes="00" />
+			<horaire jour="Sam" heures="16" minutes="40" />
+			<horaire jour="Sam" heures="19" minutes="40" />
+			<horaire jour="Sam" heures="22" minutes="10" />
+			<horaire jour="Jeu" heures="14" minutes="00" />
+			<horaire jour="Jeu" heures="19" minutes="40" />
+			<horaire jour="Jeu" heures="22" minutes="10" />
+			<horaire jour="Ven" heures="14" minutes="00" />
+			<horaire jour="Ven" heures="19" minutes="40" />
+			<horaire jour="Ven" heures="22" minutes="10" />
+			<horaire jour="Lun" heures="14" minutes="00" />
+			<horaire jour="Lun" heures="19" minutes="40" />
+			<horaire jour="Lun" heures="22" minutes="10" />
+			<horaire jour="Mar" heures="14" minutes="00" />
+			<horaire jour="Mar" heures="19" minutes="40" />
+			<horaire jour="Mar" heures="22" minutes="10" />
+			<horaire jour="Dim" heures="10" minutes="20" />
+			<horaire jour="Dim" heures="14" minutes="00" />
+			<horaire jour="Dim" heures="16" minutes="40" />
+			<horaire jour="Dim" heures="20" minutes="20" />
+		</horaires>
+		<notes>
+			<note auteur="Presse" valeur="3" base="5" />
+			<note auteur="Spectateurs" valeur="4" base="5" />
+		</notes>
+	</Film>
+	<Film titre="Le Seigneur des Anneaux" deleted="false" id="6686ca4794aab">
+		<duree heures="01" minutes="30" />
+		<genre>Fantastique</genre>
+		<realisateur>Peter Jackson</realisateur>
+		<acteurs>
+			<acteur>Elijah Wood</acteur>
+			<acteur>Ian McKellen</acteur>
+			<acteur>Viggo Mortensen</acteur>
+		</acteurs>
+		<annee>2001</annee>
+		<langue code="EN" />
+		<description>Un jeune hobbit, Frodon Sacquet, hérite d'un anneau. Bien loin de chez lui,
+			dans les ténèbres de la Terre du Milieu, il devra détruire l'anneau unique en se rendant
+			au Mordor, lieu de sa création. Il pourra anéantir sa puissance pour éviter que Sauron,
+			le seigneur des ténèbres, ne réduise en esclavage la Terre du Milieu.</description>
+		<horaires>
+			<horaire jour="Lun" heures="20" minutes="30" />
+			<horaire jour="Mar" heures="20" minutes="30" />
+			<horaire jour="Mer" heures="20" minutes="30" />
+			<horaire jour="Jeu" heures="20" minutes="30" />
+			<horaire jour="Ven" heures="20" minutes="30" />
+			<horaire jour="Sam" heures="20" minutes="30" />
+			<horaire jour="Dim" heures="20" minutes="30" />
+		</horaires>
+		<notes>
+			<note auteur="Jean" valeur="4" base="5" />
+			<note auteur="Paul" valeur="3" base="5" />
+			<note auteur="Jacques" valeur="5" base="5" />
+		</notes>
+	</Film>
+	<Film titre="Inception" deleted="false" id="7689ab47cda88">
+		<duree heures="02" minutes="28" />
+		<genre>Science-Fiction</genre>
+		<realisateur>Christopher Nolan</realisateur>
+		<acteurs>
+			<acteur>Leonardo DiCaprio</acteur>
+			<acteur>Joseph Gordon-Levitt</acteur>
+			<acteur>Ellen Page</acteur>
+		</acteurs>
+		<annee>2010</annee>
+		<langue code="EN" />
+		<description>Dom Cobb est un voleur expérimenté dans l'art périlleux de l'extraction : il
+			s'approprie les secrets les plus précieux d'un individu, enfouis au plus profond de son
+			subconscient, pendant qu'il rêve et que son esprit est le plus vulnérable.</description>
+		<horaires>
+			<horaire jour="Lun" heures="18" minutes="00" />
+			<horaire jour="Mer" heures="18" minutes="00" />
+			<horaire jour="Ven" heures="18" minutes="00" />
+			<horaire jour="Dim" heures="18" minutes="00" />
+		</horaires>
+		<notes>
+			<note auteur="Presse" valeur="4" base="5" />
+			<note auteur="Spectateurs" valeur="4.5" base="5" />
+		</notes>
+	</Film>
+	<Film titre="Avatar" deleted="false" id="5432cf874a9b">
+		<duree heures="02" minutes="42" />
+		<genre>Aventure</genre>
+		<realisateur>James Cameron</realisateur>
+		<acteurs>
+			<acteur>Sam Worthington</acteur>
+			<acteur>Zoe Saldana</acteur>
+			<acteur>Sigourney Weaver</acteur>
+		</acteurs>
+		<annee>2009</annee>
+		<langue code="EN" />
+		<description>Un ancien Marine paraplégique est recruté pour aller sur Pandora, une lune
+			extraterrestre, où il prend part à un projet scientifique en contrôlant un avatar, un
+			corps hybride créé génétiquement.</description>
+		<horaires>
+			<horaire jour="Mar" heures="21" minutes="00" />
+			<horaire jour="Jeu" heures="21" minutes="00" />
+			<horaire jour="Sam" heures="21" minutes="00" />
+			<horaire jour="Dim" heures="21" minutes="00" />
+		</horaires>
+		<notes>
+			<note auteur="Presse" valeur="4.2" base="5" />
+			<note auteur="Spectateurs" valeur="4.8" base="5" />
+		</notes>
+	</Film>
+	<Film titre="Titanic" deleted="false" id="8123gh974hca">
+		<duree heures="03" minutes="15" />
+		<genre>Drame</genre>
+		<realisateur>James Cameron</realisateur>
+		<acteurs>
+			<acteur>Leonardo DiCaprio</acteur>
+			<acteur>Kate Winslet</acteur>
+			<acteur>Billy Zane</acteur>
+		</acteurs>
+		<annee>1997</annee>
+		<langue code="EN" />
+		<description>Un artiste pauvre et une jeune femme riche tombent amoureux à bord du luxueux
+			mais maudit RMS Titanic.</description>
+		<horaires>
+			<horaire jour="Lun" heures="15" minutes="00" />
+			<horaire jour="Mar" heures="15" minutes="00" />
+			<horaire jour="Jeu" heures="15" minutes="00" />
+			<horaire jour="Ven" heures="15" minutes="00" />
+		</horaires>
+		<notes>
+			<note auteur="Presse" valeur="4.5" base="5" />
+			<note auteur="Spectateurs" valeur="4.7" base="5" />
+		</notes>
+	</Film>
 </Films>

@@ -60,7 +60,7 @@ class FilmDAO
     $genres = [];
     foreach ($this->Films->Film as $film) {
       $genre = (string) $film->genre;
-      if (!in_array($genre, $genres)) {
+      if (!in_array($genre, $genres) && $film['deleted'] == 'false') {
         $genres[] = $genre;
       }
     }
@@ -116,6 +116,7 @@ class FilmDAO
   {
     $removedfilm = $this->Films->xpath("//Film[@id='$id']")[0];
     $removedfilm['deleted'] = "true";
+    $this->Films->asXML($this->dataPath);
     return $removedfilm['id'];
   }
   public function updateFilm($Film)
