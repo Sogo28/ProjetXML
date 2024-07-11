@@ -46,14 +46,16 @@
         <?php endforeach; ?>
       </div>
     </div>
-    <div class="flex gap-4 justify-end w-full">
-      <a href="index.php?action=deleteFilm&id=<?= $id ?>"
-        class="bg-red-500 hover:bg-red-700 ease-in duration-100 text-white p-2 rounded"><i
-          class="fa-solid fa-trash"></i></a>
-      <a href="index.php?action=updateFilm&id=<?= $film->id ?>"
-        class="bg-blue-500 hover:bg-blue-700 ease-in duration-100 text-white p-2 rounded"><i
-          class="fa-solid fa-pen"></i></a>
-    </div>
+    <?php if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true): ?>
+      <div class="flex gap-4 justify-end w-full">
+        <a href="index.php?action=deleteFilm&id=<?= $id ?>"
+          class="bg-red-500 hover:bg-red-700 ease-in duration-100 text-white p-2 rounded"><i
+            class="fa-solid fa-trash"></i></a>
+        <a href="index.php?action=updateFilm&id=<?= $film->id ?>"
+          class="bg-blue-500 hover:bg-blue-700 ease-in duration-100 text-white p-2 rounded"><i
+            class="fa-solid fa-pen"></i></a>
+      </div>
+    <?php endif ?>
   </div>
 
   <script src="https://cdn.tailwindcss.com"></script>

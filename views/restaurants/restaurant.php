@@ -15,14 +15,16 @@
       <h1 class="text-xl font-bold m-auto"><?= $restaurant->nom ?></h1>
       <div class="text-sm flex flex-col gap-8"><?= $restaurant->description ?></div>
     </div>
-    <div class="flex gap-4 justify-end w-full">
-      <a href="index.php?action=deleteFilm&id=<?= $id ?>"
-        class="bg-red-500 hover:bg-red-700 ease-in duration-100 text-white p-2 rounded"><i
-          class="fa-solid fa-trash"></i></a>
-      <a href="index.php?action=updateFilm&id=<?= $restaurant->id ?>"
-        class="bg-blue-500 hover:bg-blue-700 ease-in duration-100 text-white p-2 rounded"><i
-          class="fa-solid fa-pen"></i></a>
-    </div>
+    <?php if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true): ?>
+      <div class="flex gap-4 justify-end w-full">
+        <a href="index.php?action=deleteRestaurant&id=<?= $id ?>"
+          class="bg-red-500 hover:bg-red-700 ease-in duration-100 text-white p-2 rounded"><i
+            class="fa-solid fa-trash"></i></a>
+        <a href="index.php?action=updateRestaurant&id=<?= $restaurant->id ?>"
+          class="bg-blue-500 hover:bg-blue-700 ease-in duration-100 text-white p-2 rounded"><i
+            class="fa-solid fa-pen"></i></a>
+      </div>
+    <?php endif ?>
   </div>
 
   <script src="https://cdn.tailwindcss.com"></script>

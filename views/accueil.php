@@ -7,7 +7,7 @@
     <title>Films</title>
 </head>
 
-<body>
+<body class="bg-slate-50">
     <?php require_once 'views/components/header.php' ?>
     <div
         class="flex flex-col justify-center items-center bg-white w-2/3 h-full mt-8 shadow shadow-lg m-auto py-8 gap-3">

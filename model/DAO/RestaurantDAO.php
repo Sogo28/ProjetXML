@@ -67,7 +67,7 @@ class RestaurantDAO
   {
     $restaurant = simplexml_load_file($restaurantFilePath);
     $restaurantId = $restaurant['id'];
-    $restaurantToUpdate = $this->Restaurants->xpath("//Restaurant[@id='$restaurantId']")[0];
+    $restaurantToUpdate = $this->Restaurants->xpath("//restaurant[@id='$restaurantId']")[0];
     $restaurantToUpdate[0] = $restaurant->asXML();
     $this->Restaurants->asXML('data\\restau_temp.xml');
     $isValid = $this->isValid('data\\restau_temp.xml');
@@ -82,7 +82,7 @@ class RestaurantDAO
 
   public function deleteRestaurant($id)
   {
-    $restaurantToDelete = $this->Restaurants->xpath("//Restaurant[@id='$id']")[0];
+    $restaurantToDelete = $this->Restaurants->xpath("//restaurant[@id='$id']")[0];
     $restaurantToDelete['deleted'] = 'true';
     $this->Restaurants->asXML('data\\restau_temp.xml');
     $isValid = $this->isValid('data\\restau_temp.xml');
