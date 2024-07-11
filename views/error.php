@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <?php require_once 'components/header.php' ?>
+  <?php require_once 'views/components/header.php' ?>
   <div class="flex h-screen bg-red-100 w-full justify-center items-center">
     <h1 class="text-4xl"><?= $errorMessage ?></h1>
   </div>

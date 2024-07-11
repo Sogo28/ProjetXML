@@ -11,35 +11,34 @@ class FilmController
   {
     $films = $this->filmService->getAll();
     $genres = $this->filmService->getAllGenres();
-    require_once 'views/accueil.php';
+    require_once 'views/films/accueil.php';
   }
   public function showAddFilm()
   {
     $genres = $this->filmService->getAllGenres();
-    require_once 'views/addFilm.php';
+    require_once 'views/films/addFilm.php';
   }
   public function showUpdateFilm()
   {
     $genres = $this->filmService->getAllGenres();
     $film = $this->filmService->getByid($_GET['id']);
-    require_once 'views/updateFilm.php';
+    require_once 'views/films/updateFilm.php';
   }
   public function showAllByGenre($genre)
   {
     $films = $this->filmService->getAllByGenre($genre);
     $genres = $this->filmService->getAllGenres();
-    require_once 'views/filmsByGenre.php';
+    require_once 'views/films/accueil.php';
   }
   public function showFilm($id)
   {
     $film = $this->filmService->getByid($id);
     $genres = $this->filmService->getAllGenres();
     $horairesFormatees = $this->filmService->formatHoraires($film->horaires);
-    require_once 'views/film.php';
+    require_once 'views/films/film.php';
   }
   public function showError($errorMessage = 'Une erreur est survenue')
   {
-    $genres = $this->filmService->getAllGenres();
     require_once 'views/error.php';
   }
   public function addFilm()

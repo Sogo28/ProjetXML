@@ -8,11 +8,11 @@
 
 </head>
 
-<body class="bg-slate-100">
-  <?php require_once 'components/header.php' ?>
-  <div class="flex flex-col gap-4 m-4 bg-white rounded rounded-xl p-4 shadow shadow-lg">
-    <div class="flex flex-col gap-4 ">
-      <h1 class="text-2xl font-bold m-auto"><?= $film->titre ?></h1>
+<body class="bg-slate-50">
+  <?php require_once 'views/components/header.php' ?>
+  <div class="flex flex-col gap-4 mx-auto my-4 bg-white rounded rounded-xl p-4 shadow shadow-lg w-1/2">
+    <div class="flex flex-col gap-4">
+      <h1 class="text-xl font-bold m-auto"><?= $film->titre ?></h1>
       <p class="">
         <?php echo $film->genre . " (" . $film->duree[0] . "h" . $film->duree[1] . "min)" ?>
       </p>
@@ -38,7 +38,7 @@
         <?php
       }
       ?>
-      <p class="italic ml-3 p-3 bg-slate-100"><?= $film->description ?></p>
+      <p class="italic ml-3 p-3 bg-slate-100 rounded rounded-lg"><?= $film->description ?></p>
       <div>
         <h3 class="font-bold">Horaires</h3>
         <?php foreach ($horairesFormatees as $jour => $heure): ?>
@@ -47,8 +47,12 @@
       </div>
     </div>
     <div class="flex gap-4 justify-end w-full">
-      <a href="index.php?action=deleteFilm&id=<?= $id ?>" class="bg-red-500 text-white p-2 rounded">Supprimer</a>
-      <a href="index.php?action=updateFilm&id=<?= $film->id ?>" class="bg-blue-500 text-white p-2 rounded">Modifier</a>
+      <a href="index.php?action=deleteFilm&id=<?= $id ?>"
+        class="bg-red-500 hover:bg-red-700 ease-in duration-100 text-white p-2 rounded"><i
+          class="fa-solid fa-trash"></i></a>
+      <a href="index.php?action=updateFilm&id=<?= $film->id ?>"
+        class="bg-blue-500 hover:bg-blue-700 ease-in duration-100 text-white p-2 rounded"><i
+          class="fa-solid fa-pen"></i></a>
     </div>
   </div>
 
