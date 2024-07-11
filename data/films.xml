@@ -150,4 +150,4 @@
       <horaire jour="Mar" heures="12" minutes="45"/>
     </horaires>
   </Film>
-</Films>
+<Film titre="Master Niebe" deleted="false" id="668eee57dec96"><duree heures="13" minutes="30"/><genre>Science-fiction</genre><realisateur>Aicha Victor</realisateur><acteurs><acteur>Coumba Kane alias MasterNiebe</acteur></acteurs><annee>2021</annee><langue code="VF"/><description>Le niebe est un art ! Quiconque se veut d'etre un master du niebe et manger du niebe de haut niveau alors venez voir ce beau film de science-fiction . Ne vous la faites pas raconter</description><horaires><horaire jour="Lun" heures="08" minutes="25"/></horaires><notes><note auteur="Aicha" valeur="5" base="5"/></notes></Film></Films>
