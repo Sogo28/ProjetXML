@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE restaurants SYSTEM "../schemas/restaurants.dtd">
 <restaurants>
-    <restaurant id="R001">
+    <restaurant id="R001" deleted="false">
         <coordonnees nom="La Bonne Table" adresse="123 Rue Principale, Ville X" />
         <nom_restaurateur>Jean Dupont</nom_restaurateur>
         <description>
@@ -9,6 +9,16 @@
             <paragraphe>
                 <partie_texte_important>Notre spécialité:</partie_texte_important> les plats
                 traditionnels. </paragraphe>
+            <paragraphe> Un restaurant familial avec une ambiance chaleureuse. <image
+                    url="https://picsum.photos/200" position="gauche" />
+            </paragraphe>
+            <paragraphe>
+                <partie_texte_important>Notre spécialité:</partie_texte_important> les plats
+                traditionnels. <image url="https://picsum.photos/200" position="droite" />
+            </paragraphe>
+            <paragraphe> Découvrez notre menu varié. <image url="https://picsum.photos/200"
+                    position="centre" />
+            </paragraphe>
         </description>
         <carte>
             <plat id="P001" type_plat="entree">
@@ -43,7 +53,7 @@
             </menu>
         </liste_menu>
     </restaurant>
-    <restaurant id="R002">
+    <restaurant id="R002" deleted="false">
         <coordonnees nom="Le Gourmet" adresse="456 Avenue de la Gastronomie, Ville Y" />
         <nom_restaurateur>Marie Lemoine</nom_restaurateur>
         <description>

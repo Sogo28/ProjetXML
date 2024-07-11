@@ -34,7 +34,7 @@ class RestaurantDAO
   public function getAll()
   {
     $allRestaurants = [];
-    foreach ($this->Restaurants->Restaurant as $restaurant) {
+    foreach ($this->Restaurants->restaurant as $restaurant) {
       if ($restaurant['deleted'] == 'false') {
         $allRestaurants[] = $this->mapToRestaurant($restaurant);
       }
@@ -44,7 +44,7 @@ class RestaurantDAO
 
   public function getByid($id)
   {
-    return $this->mapToRestaurant($this->Restaurants->xpath("//Restaurant[@id='$id']")[0]);
+    return $this->mapToRestaurant($this->Restaurants->xpath("//restaurant[@id='$id']")[0]);
   }
 
   public function addRestaurant($restaurantFilePath)
@@ -99,20 +99,11 @@ class RestaurantDAO
   {
     $newRestaurant = new Restaurant();
     $newRestaurant->id = $restaurant['id'];
-    $newRestaurant->nom = $restaurant->nom;
-    $newRestaurant->adresse = $restaurant->adresse;
-    $newRestaurant->nomRestaurateur = $restaurant->nomRestaurateur;
-    $newRestaurant->description = $restaurant->description;
-    $newRestaurant->carte = $restaurant->carte;
-    $newRestaurant->menus = [];
-    foreach ($restaurant->menus->menu as $menu) {
-      $newMenu = new Menu();
-      $newMenu->id = $menu['id'];
-      $newMenu->nom = $menu->nom;
-      $newMenu->prix = $menu->prix;
-      $newMenu->description = $menu->description;
-      $newRestaurant->menus[] = $newMenu;
-    }
+    $newRestaurant->nom = $restaurant->coordonnees['nom'];
+    $newRestaurant->adresse = $restaurant->coordonnees['adresse'];
+    $newRestaurant->nomRestaurateur = (string) $restaurant->nom_restaurateur;
+    $newRestaurant->setDescription($restaurant->description);
+
     return $newRestaurant;
   }
 

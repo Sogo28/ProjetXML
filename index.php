@@ -1,9 +1,13 @@
 <?php
 session_start();
 require_once 'controllers/filmController.php';
+require_once 'controllers/restaurantController.php';
 require_once 'controllers/authController.php';
+require_once 'controllers/appController.php';
 
-$controller = new FilmController();
+$appController = new AppController();
+$restaurantController = new RestaurantController();
+$filmController = new FilmController();
 $authController = new AuthController();
 
 if (isset($_GET['action'])) {
@@ -17,14 +21,61 @@ if (isset($_GET['action'])) {
         case 'logout':
             $authController->logout();
             break;
-        default:
-            handleFilmActions($controller);
+        case 'restaurant':
+            handleRestaurantActions($restaurantController);
+            break;
+        case 'film':
+            handleFilmActions($filmController);
             break;
     }
 } else {
-    $controller->showIndex();
+    $appController->showIndex();
 }
 
+function handleRestaurantActions($controller)
+{
+    if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+        $controller->showIndex();
+        return;
+    }
+
+    $action = $_GET['action'];
+    switch ($action) {
+        case 'restaurant':
+            if (isset($_GET['id'])) {
+                $controller->showRestaurant($_GET['id']);
+            } else {
+                $controller->showIndex();
+            }
+            break;
+        case 'addRestaurant':
+            $controller->showAddRestaurant();
+            break;
+        case 'handleAddRestaurantSubmit':
+            $controller->addRestaurant();
+            break;
+        case 'updateRestaurant':
+            if (isset($_GET['id'])) {
+                $controller->showUpdateRestaurant();
+            } else {
+                $controller->showError("Le restaurant n'existe pas");
+            }
+            break;
+        case 'handleUpdateRestaurantSubmit':
+            $controller->updateRestaurant();
+            break;
+        case 'deleteRestaurant':
+            if (isset($_GET['id'])) {
+                $controller->deleteRestaurant($_GET['id']);
+            } else {
+                $controller->showError("Le restaurant n'existe pas");
+            }
+            break;
+        default:
+            $controller->showError("Action non reconnue");
+            break;
+    }
+}
 function handleFilmActions($controller)
 {
     if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
@@ -38,7 +89,7 @@ function handleFilmActions($controller)
             if (isset($_GET['id'])) {
                 $controller->showFilm($_GET['id']);
             } else {
-                $controller->showError("Ce film n'existe pas");
+                $controller->showIndex();
             }
             break;
         case 'genre':
