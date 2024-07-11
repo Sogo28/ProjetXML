@@ -9,7 +9,9 @@
 
 <body class="bg-slate-50 h-full flex flex-col">
   <?php require_once 'views/components/header.php' ?>
-  <?php require_once 'views/components/films/addFilm.php' ?>
+  <?php if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true): ?>
+    <?php require_once 'views/components/films/addFilm.php' ?>
+  <?php endif ?>
   <div class="mt-4 mx-8">
     <?php require_once 'views/components/films/filmContainer.php' ?>
   </div>
