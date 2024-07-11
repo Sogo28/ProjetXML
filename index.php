@@ -25,7 +25,8 @@ if (isset($_GET['action'])) {
     $controller->showIndex();
 }
 
-function handleFilmActions($controller) {
+function handleFilmActions($controller)
+{
     if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
         $controller->showIndex();
         return;
