@@ -1,6 +1,8 @@
 <!ELEMENT restaurants (restaurant+)>
 <!ELEMENT restaurant (coordonnees, nom_restaurateur, description?, carte, liste_menu?)>
-<!ATTLIST restaurant id ID #REQUIRED>
+<!ATTLIST restaurant
+    id ID #REQUIRED
+    deleted CDATA #REQUIRED>
 <!ELEMENT coordonnees EMPTY>
 <!ATTLIST coordonnees
     nom CDATA #REQUIRED

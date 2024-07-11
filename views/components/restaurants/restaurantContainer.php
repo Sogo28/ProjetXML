@@ -6,9 +6,9 @@
           <div class="flex flex-col border-b-2 border-slate-300">
             <a href="index.php?action=restaurant&id=<?= $restaurant->id ?>"
               class="text-xl font-bold"><?= $restaurant->nom ?></a>
-            <p class="text-xs italic">De <?= $restaurant->nomRestaurateur ?></p>
+            <p class="text-xs italic">Restaurateur : <?= $restaurant->nomRestaurateur ?></p>
           </div>
-          <p class="text-sm"><?= $restaurant->description ?></p>
+          <p class="text-sm"><i class="fa-solid fa-map-pin"></i> <?= $restaurant->adresse ?></p>
           <a href="index.php?action=restaurant&id=<?= $restaurant->id ?>"
             class="self-end mr-4 bg-slate-100 px-3 py-1 rounded rounded-lg hover:bg-black hover:text-white  ease-in duration-100"><i
               class="fa-solid fa-eye"></i></a>
