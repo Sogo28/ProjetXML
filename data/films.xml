@@ -13,8 +13,8 @@
 		<annee>2005</annee>
 		<langue code="EN" />
 		<description>Les aventures du commissaire Valentin et des inspecteurs Terrasson et Pujol,
-			membres des Brigades mobiles, corps spécial de la police française créé avant la
-			Première Guerre mondiale.</description>
+			membres des Brigades mobiles, corps spécial de la police française créé avant la Première
+			Guerre mondiale.</description>
 		<horaires>
 			<horaire jour="Mer" heures="14" minutes="00" />
 			<horaire jour="Mer" heures="16" minutes="40" />
@@ -57,10 +57,10 @@
 		</acteurs>
 		<annee>2001</annee>
 		<langue code="EN" />
-		<description>Un jeune hobbit, Frodon Sacquet, hérite d'un anneau. Bien loin de chez lui,
-			dans les ténèbres de la Terre du Milieu, il devra détruire l'anneau unique en se rendant
-			au Mordor, lieu de sa création. Il pourra anéantir sa puissance pour éviter que Sauron,
-			le seigneur des ténèbres, ne réduise en esclavage la Terre du Milieu.</description>
+		<description>Un jeune hobbit, Frodon Sacquet, hérite d'un anneau. Bien loin de chez lui, dans
+			les ténèbres de la Terre du Milieu, il devra détruire l'anneau unique en se rendant au Mordor,
+			lieu de sa création. Il pourra anéantir sa puissance pour éviter que Sauron, le seigneur des
+			ténèbres, ne réduise en esclavage la Terre du Milieu.</description>
 		<horaires>
 			<horaire jour="Lun" heures="20" minutes="30" />
 			<horaire jour="Mar" heures="20" minutes="30" />
@@ -113,8 +113,8 @@
 		<annee>2009</annee>
 		<langue code="EN" />
 		<description>Un ancien Marine paraplégique est recruté pour aller sur Pandora, une lune
-			extraterrestre, où il prend part à un projet scientifique en contrôlant un avatar, un
-			corps hybride créé génétiquement.</description>
+			extraterrestre, où il prend part à un projet scientifique en contrôlant un avatar, un corps
+			hybride créé génétiquement.</description>
 		<horaires>
 			<horaire jour="Mar" heures="21" minutes="00" />
 			<horaire jour="Jeu" heures="21" minutes="00" />
@@ -137,8 +137,8 @@
 		</acteurs>
 		<annee>1997</annee>
 		<langue code="EN" />
-		<description>Un artiste pauvre et une jeune femme riche tombent amoureux à bord du luxueux
-			mais maudit RMS Titanic.</description>
+		<description>Un artiste pauvre et une jeune femme riche tombent amoureux à bord du luxueux mais
+			maudit RMS Titanic.</description>
 		<horaires>
 			<horaire jour="Lun" heures="15" minutes="00" />
 			<horaire jour="Mar" heures="15" minutes="00" />
