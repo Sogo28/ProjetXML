@@ -71,11 +71,11 @@ function handleRestaurantActions($controller)
                 $controller->showError("Le restaurant n'existe pas");
             }
             break;
-        default:
-            $controller->showError("Action non reconnue");
-            break;
     }
 }
+
+
+
 function handleFilmActions($controller)
 {
     if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
@@ -126,9 +126,7 @@ function handleFilmActions($controller)
                 $controller->showError("Le film n'existe pas");
             }
             break;
-        default:
-            $controller->showError("Action non reconnue");
-            break;
     }
 }
+
 ?>

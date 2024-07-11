@@ -1,6 +1,6 @@
 <div class="flex flex-col mb-8">
   <div class="flex flex-row gap-4 py-2 items-center w-full mb-2">
-    <a href="index.php"
+    <a href="index.php?action=film"
       class="border-b-0 text-sm text-black bg-white px-2 py-1 rounded rounded-lg hover:text-white shadow shadow-lg hover:bg-black ease-in duration-100 font-medium">Tout
       Genre</a>
     <?php foreach ($genres as $genre): ?>
