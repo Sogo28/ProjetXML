@@ -10,7 +10,7 @@
 
 <body class="bg-slate-50">
   <?php require_once 'views/components/header.php' ?>
-  <div class="flex flex-row gap-4 m-4">
+  <div class="flex flex-row gap-4 m-4 justify-center">
     <div class="flex flex-col gap-4 bg-white rounded rounded-xl p-4 shadow shadow-lg w-1/2">
       <div class="flex flex-col gap-4">
         <h1 class="text-xl font-bold m-auto"><?= $restaurant->nom ?></h1>
@@ -27,13 +27,13 @@
         </div>
       <?php endif ?>
     </div>
-    <div class="text-sm flex flex-col gap-4 p-4 rounded rounded-lg bg-white shadow shadow-lg">
+    <div class="h-fit text-sm flex flex-col gap-4 p-4 rounded rounded-lg bg-white shadow shadow-lg">
       <h1 class="text-xl font-bold">Notre Carte</h1>
       <div>
         <?= $restaurant->carte ?>
       </div>
     </div>
-    <div class="text-sm flex flex-col gap-4 p-4 rounded rounded-lg bg-white shadow shadow-lg">
+    <div class="h-fit text-sm flex flex-col gap-4 p-4 rounded rounded-lg bg-white shadow shadow-lg">
       <h1 class="text-xl font-bold">Nos Menus</h1>
       <div>
         <?= $restaurant->menus ?>
