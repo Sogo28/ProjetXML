@@ -21,14 +21,14 @@ class RestaurantService
     return $this->restaurantDAO->getByid($id);
   }
 
-  public function addRestaurant($restaurantFilePath)
+  public function addRestaurant($restaurant)
   {
-    return $this->restaurantDAO->addRestaurant($restaurantFilePath);
+    return $this->restaurantDAO->addRestaurant($restaurant);
   }
 
-  public function updateRestaurant($restaurantFilePath)
+  public function updateRestaurant($restaurantFilePath, $id)
   {
-    return $this->restaurantDAO->updateRestaurant($restaurantFilePath);
+    return $this->restaurantDAO->updateRestaurant($restaurantFilePath, $id);
   }
 
   public function deleteRestaurant($id)

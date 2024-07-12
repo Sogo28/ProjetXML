@@ -58,7 +58,7 @@ class FilmController
     ];
     $isAdded = $this->filmService->addFilm($data);
     if ($isAdded[0]) {
-      $this->showIndex();
+      header('Location: index.php?action=film');
     } else {
       $this->showError("Erreur lors de l'ajout du film : " . $isAdded[1]);
     }
@@ -81,7 +81,7 @@ class FilmController
     ];
     $isUpdated = $this->filmService->updateFilm($data);
     if ($isUpdated[0]) {
-      $this->showIndex();
+      header('Location: index.php?action=film');
     } else {
       $this->showError("Erreur lors de la mise à jour du film : " . $isUpdated[1]);
     }
@@ -89,7 +89,8 @@ class FilmController
   public function deleteFilm($id)
   {
     $this->filmService->deleteFilm($id);
-    $this->showIndex();
+    header('Location: index.php?action=film');
+
   }
 }
 ?>

@@ -2,7 +2,7 @@
 <!DOCTYPE Films SYSTEM "../schemas/cinema.dtd">
 <Films>
 	<Film titre="Les Brigades du Tigre" deleted="false" id="1235">
-		<duree heures="02" minutes="45" />
+		<duree heures="02" minutes="45"/>
 		<genre>Policier</genre>
 		<realisateur>Jérôme Cornuau</realisateur>
 		<acteurs>
@@ -11,43 +11,43 @@
 			<acteur>E. Baer</acteur>
 		</acteurs>
 		<annee>2005</annee>
-		<langue code="EN" />
+		<langue code="EN"/>
 		<description>Les aventures du commissaire Valentin et des inspecteurs Terrasson et Pujol,
 			membres des Brigades mobiles, corps spécial de la police française créé avant la Première
 			Guerre mondiale.</description>
 		<horaires>
-			<horaire jour="Mer" heures="14" minutes="00" />
-			<horaire jour="Mer" heures="16" minutes="40" />
-			<horaire jour="Mer" heures="19" minutes="40" />
-			<horaire jour="Mer" heures="22" minutes="10" />
-			<horaire jour="Sam" heures="14" minutes="00" />
-			<horaire jour="Sam" heures="16" minutes="40" />
-			<horaire jour="Sam" heures="19" minutes="40" />
-			<horaire jour="Sam" heures="22" minutes="10" />
-			<horaire jour="Jeu" heures="14" minutes="00" />
-			<horaire jour="Jeu" heures="19" minutes="40" />
-			<horaire jour="Jeu" heures="22" minutes="10" />
-			<horaire jour="Ven" heures="14" minutes="00" />
-			<horaire jour="Ven" heures="19" minutes="40" />
-			<horaire jour="Ven" heures="22" minutes="10" />
-			<horaire jour="Lun" heures="14" minutes="00" />
-			<horaire jour="Lun" heures="19" minutes="40" />
-			<horaire jour="Lun" heures="22" minutes="10" />
-			<horaire jour="Mar" heures="14" minutes="00" />
-			<horaire jour="Mar" heures="19" minutes="40" />
-			<horaire jour="Mar" heures="22" minutes="10" />
-			<horaire jour="Dim" heures="10" minutes="20" />
-			<horaire jour="Dim" heures="14" minutes="00" />
-			<horaire jour="Dim" heures="16" minutes="40" />
-			<horaire jour="Dim" heures="20" minutes="20" />
+			<horaire jour="Mer" heures="14" minutes="00"/>
+			<horaire jour="Mer" heures="16" minutes="40"/>
+			<horaire jour="Mer" heures="19" minutes="40"/>
+			<horaire jour="Mer" heures="22" minutes="10"/>
+			<horaire jour="Sam" heures="14" minutes="00"/>
+			<horaire jour="Sam" heures="16" minutes="40"/>
+			<horaire jour="Sam" heures="19" minutes="40"/>
+			<horaire jour="Sam" heures="22" minutes="10"/>
+			<horaire jour="Jeu" heures="14" minutes="00"/>
+			<horaire jour="Jeu" heures="19" minutes="40"/>
+			<horaire jour="Jeu" heures="22" minutes="10"/>
+			<horaire jour="Ven" heures="14" minutes="00"/>
+			<horaire jour="Ven" heures="19" minutes="40"/>
+			<horaire jour="Ven" heures="22" minutes="10"/>
+			<horaire jour="Lun" heures="14" minutes="00"/>
+			<horaire jour="Lun" heures="19" minutes="40"/>
+			<horaire jour="Lun" heures="22" minutes="10"/>
+			<horaire jour="Mar" heures="14" minutes="00"/>
+			<horaire jour="Mar" heures="19" minutes="40"/>
+			<horaire jour="Mar" heures="22" minutes="10"/>
+			<horaire jour="Dim" heures="10" minutes="20"/>
+			<horaire jour="Dim" heures="14" minutes="00"/>
+			<horaire jour="Dim" heures="16" minutes="40"/>
+			<horaire jour="Dim" heures="20" minutes="20"/>
 		</horaires>
 		<notes>
-			<note auteur="Presse" valeur="3" base="5" />
-			<note auteur="Spectateurs" valeur="4" base="5" />
+			<note auteur="Presse" valeur="3" base="5"/>
+			<note auteur="Spectateurs" valeur="4" base="5"/>
 		</notes>
 	</Film>
 	<Film titre="Le Seigneur des Anneaux" deleted="false" id="6686ca4794aab">
-		<duree heures="01" minutes="30" />
+		<duree heures="01" minutes="30"/>
 		<genre>Fantastique</genre>
 		<realisateur>Peter Jackson</realisateur>
 		<acteurs>
@@ -56,28 +56,28 @@
 			<acteur>Viggo Mortensen</acteur>
 		</acteurs>
 		<annee>2001</annee>
-		<langue code="EN" />
+		<langue code="EN"/>
 		<description>Un jeune hobbit, Frodon Sacquet, hérite d'un anneau. Bien loin de chez lui, dans
 			les ténèbres de la Terre du Milieu, il devra détruire l'anneau unique en se rendant au Mordor,
 			lieu de sa création. Il pourra anéantir sa puissance pour éviter que Sauron, le seigneur des
 			ténèbres, ne réduise en esclavage la Terre du Milieu.</description>
 		<horaires>
-			<horaire jour="Lun" heures="20" minutes="30" />
-			<horaire jour="Mar" heures="20" minutes="30" />
-			<horaire jour="Mer" heures="20" minutes="30" />
-			<horaire jour="Jeu" heures="20" minutes="30" />
-			<horaire jour="Ven" heures="20" minutes="30" />
-			<horaire jour="Sam" heures="20" minutes="30" />
-			<horaire jour="Dim" heures="20" minutes="30" />
+			<horaire jour="Lun" heures="20" minutes="30"/>
+			<horaire jour="Mar" heures="20" minutes="30"/>
+			<horaire jour="Mer" heures="20" minutes="30"/>
+			<horaire jour="Jeu" heures="20" minutes="30"/>
+			<horaire jour="Ven" heures="20" minutes="30"/>
+			<horaire jour="Sam" heures="20" minutes="30"/>
+			<horaire jour="Dim" heures="20" minutes="30"/>
 		</horaires>
 		<notes>
-			<note auteur="Jean" valeur="4" base="5" />
-			<note auteur="Paul" valeur="3" base="5" />
-			<note auteur="Jacques" valeur="5" base="5" />
+			<note auteur="Jean" valeur="4" base="5"/>
+			<note auteur="Paul" valeur="3" base="5"/>
+			<note auteur="Jacques" valeur="5" base="5"/>
 		</notes>
 	</Film>
 	<Film titre="Inception" deleted="false" id="7689ab47cda88">
-		<duree heures="02" minutes="28" />
+		<duree heures="02" minutes="28"/>
 		<genre>Science-Fiction</genre>
 		<realisateur>Christopher Nolan</realisateur>
 		<acteurs>
@@ -86,23 +86,23 @@
 			<acteur>Ellen Page</acteur>
 		</acteurs>
 		<annee>2010</annee>
-		<langue code="EN" />
+		<langue code="EN"/>
 		<description>Dom Cobb est un voleur expérimenté dans l'art périlleux de l'extraction : il
 			s'approprie les secrets les plus précieux d'un individu, enfouis au plus profond de son
 			subconscient, pendant qu'il rêve et que son esprit est le plus vulnérable.</description>
 		<horaires>
-			<horaire jour="Lun" heures="18" minutes="00" />
-			<horaire jour="Mer" heures="18" minutes="00" />
-			<horaire jour="Ven" heures="18" minutes="00" />
-			<horaire jour="Dim" heures="18" minutes="00" />
+			<horaire jour="Lun" heures="18" minutes="00"/>
+			<horaire jour="Mer" heures="18" minutes="00"/>
+			<horaire jour="Ven" heures="18" minutes="00"/>
+			<horaire jour="Dim" heures="18" minutes="00"/>
 		</horaires>
 		<notes>
-			<note auteur="Presse" valeur="4" base="5" />
-			<note auteur="Spectateurs" valeur="4.5" base="5" />
+			<note auteur="Presse" valeur="4" base="5"/>
+			<note auteur="Spectateurs" valeur="4.5" base="5"/>
 		</notes>
 	</Film>
 	<Film titre="Avatar" deleted="false" id="5432cf874a9b">
-		<duree heures="02" minutes="42" />
+		<duree heures="02" minutes="42"/>
 		<genre>Aventure</genre>
 		<realisateur>James Cameron</realisateur>
 		<acteurs>
@@ -111,43 +111,31 @@
 			<acteur>Sigourney Weaver</acteur>
 		</acteurs>
 		<annee>2009</annee>
-		<langue code="EN" />
+		<langue code="EN"/>
 		<description>Un ancien Marine paraplégique est recruté pour aller sur Pandora, une lune
 			extraterrestre, où il prend part à un projet scientifique en contrôlant un avatar, un corps
 			hybride créé génétiquement.</description>
 		<horaires>
-			<horaire jour="Mar" heures="21" minutes="00" />
-			<horaire jour="Jeu" heures="21" minutes="00" />
-			<horaire jour="Sam" heures="21" minutes="00" />
-			<horaire jour="Dim" heures="21" minutes="00" />
+			<horaire jour="Mar" heures="21" minutes="00"/>
+			<horaire jour="Jeu" heures="21" minutes="00"/>
+			<horaire jour="Sam" heures="21" minutes="00"/>
+			<horaire jour="Dim" heures="21" minutes="00"/>
 		</horaires>
 		<notes>
-			<note auteur="Presse" valeur="4.2" base="5" />
-			<note auteur="Spectateurs" valeur="4.8" base="5" />
+			<note auteur="Presse" valeur="4.2" base="5"/>
+			<note auteur="Spectateurs" valeur="4.8" base="5"/>
 		</notes>
 	</Film>
 	<Film titre="Titanic" deleted="false" id="8123gh974hca">
-		<duree heures="03" minutes="15" />
+		<duree heures="03" minutes="15"/>
 		<genre>Drame</genre>
 		<realisateur>James Cameron</realisateur>
-		<acteurs>
-			<acteur>Leonardo DiCaprio</acteur>
-			<acteur>Kate Winslet</acteur>
-			<acteur>Billy Zane</acteur>
-		</acteurs>
+		<acteurs><acteur>Leonardo DiCaprio</acteur><acteur>Kate Winslet</acteur><acteur>Billy Zane</acteur></acteurs>
 		<annee>1997</annee>
-		<langue code="EN" />
-		<description>Un artiste pauvre et une jeune femme riche tombent amoureux à bord du luxueux mais
+		<langue code="EN"/>
+		<description>Un artiste pauvre et une jeune femme riche tombent amoureux à bord du luxueux mais&#13;
 			maudit RMS Titanic.</description>
-		<horaires>
-			<horaire jour="Lun" heures="15" minutes="00" />
-			<horaire jour="Mar" heures="15" minutes="00" />
-			<horaire jour="Jeu" heures="15" minutes="00" />
-			<horaire jour="Ven" heures="15" minutes="00" />
-		</horaires>
-		<notes>
-			<note auteur="Presse" valeur="4.5" base="5" />
-			<note auteur="Spectateurs" valeur="4.7" base="5" />
-		</notes>
+		<horaires><horaire jour="Lun" heures="15" minutes="00"/><horaire jour="Mar" heures="15" minutes="00"/><horaire jour="Jeu" heures="15" minutes="00"/><horaire jour="Ven" heures="15" minutes="00"/></horaires>
+		<notes><note auteur="Presse" valeur="4" base="5"/><note auteur="Spectateurs" valeur="4" base="5"/><note auteur="Louna" valeur="3" base="5"/></notes>
 	</Film>
 </Films>

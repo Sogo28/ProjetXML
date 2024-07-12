@@ -11,7 +11,7 @@
   <?php require_once 'views/components/header.php' ?>
   <div class="flex flex-col justify-center items-center bg-white w-2/3 h-full mt-8 shadow shadow-lg m-auto py-8 gap-3">
     <h1 class="text-2xl">Ajouter un restaurant</h1>
-    <form action="/index.php?action=addRestaurant" method="post" enctype="multipart/form-data">
+    <form action="/index.php?action=handleAddRestaurantSubmit" method="post" enctype="multipart/form-data">
       <label for="restaurantFile">Fichier XML du restaurant</label>
       <input type="file" name="restaurantFile" id="restaurantFile"
         class="border border-1 p-2 rounded rounded-lg  border-slate-300 text-sm w-60 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">

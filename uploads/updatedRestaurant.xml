@@ -1,0 +1,52 @@
+<restaurant id="R001" deleted="false">
+    <coordonnees nom="La Bonne Table ronde" adresse="123 Rue Principale, Ville X" />
+    <nom_restaurateur>Jean Dupont</nom_restaurateur>
+    <description>
+        <paragraphe>Un restaurant familial avec une ambiance chaleureuse.</paragraphe>
+        <paragraphe>
+            <partie_texte_important>Notre spécialité:</partie_texte_important> les plats
+            traditionnels. </paragraphe>
+        <paragraphe> Un restaurant familial avec une ambiance chaleureuse. <image
+                url="https://picsum.photos/200" position="gauche" />
+        </paragraphe>
+        <paragraphe>
+            <partie_texte_important>Notre spécialité:</partie_texte_important> les plats
+            traditionnels. <image url="https://picsum.photos/200" position="droite" />
+        </paragraphe>
+        <paragraphe> Découvrez notre menu varié. <image url="https://picsum.photos/200"
+                position="centre" />
+        </paragraphe>
+    </description>
+    <carte>
+        <plat id="P001" type_plat="entree">
+            <prix montant="10.00" devise="EUR" />
+            <desc_plat>
+                <paragraphe>Salade César</paragraphe>
+            </desc_plat>
+        </plat>
+        <plat id="P002" type_plat="plat">
+            <prix montant="20.00" devise="EUR" />
+            <desc_plat>
+                <paragraphe>Entrecôte grillée</paragraphe>
+            </desc_plat>
+        </plat>
+        <plat id="P003" type_plat="dessert">
+            <prix montant="8.00" devise="EUR" />
+            <desc_plat>
+                <paragraphe>Tarte aux pommes</paragraphe>
+            </desc_plat>
+        </plat>
+    </carte>
+    <liste_menu choix_ordre="prix">
+        <menu>
+            <titre>Menu Déjeuner</titre>
+            <description_menu>Un menu complet à prix réduit</description_menu>
+            <prix montant="35.00" devise="EUR" />
+            <liste_elem_menu>
+                <elem_menu plat_ref="P001" />
+                <elem_menu plat_ref="P002" />
+                <elem_menu plat_ref="P003" />
+            </liste_elem_menu>
+        </menu>
+    </liste_menu>
+</restaurant>
